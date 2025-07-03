@@ -1,0 +1,28 @@
+Copyright 2025
+L. Larrabee Strow,  Sergio DeSouza-Machado, Ryan Kramer
+Atmospheric Spectroscopy Laboratory
+
+This PLOTTER and Climate analysis CODE is distributed under the terms of the GNU GPL v3
+
+See Copyright.txt
+
+------------------------------------------------------------------------
+
+Code development
+
+Larabee Strow     : Principal Investigator
+
+Sergio DeSouza-Machado 
+                  : Coding up jacobians and doing the data analysis
+
+Ryan Kramer       : Testing and comparisons to GCM output
+
+F90 kCARTA code is available at 
+  https://github.com/sergio66/kcarta_gen
+  See https://doi.org/10.5194/amt-13-323-2020 for the kCARTA paper
+    kCARTA: a fast pseudo line-by-line radiative transfer algorithm with
+    analytic Jacobians, fluxes, nonlocal thermodynamic equilibrium, and
+    scattering for the infrared
+
+Any or all of the above may be licensed separately.
+
