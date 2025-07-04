@@ -149,15 +149,15 @@ iSaveJac = -1;
 if iSaveJac > 0
   commentJacX = 'see /home/sergio/MATLABCODE/oem_pkg_run/AIRS_gridded_STM_May2021_trendsonlyCLR/get_jac_fast.m';
   if iVersJac == 2019
-    saverjac = ['save /asl/s1/sergio/rtp/MakeAvgProfs2002_2020_startSept2002/Retrieval/LatBin65/SubsetJacLatbin/usethisjac_clear_reconstructcode_latbin_' num2str(iLatBin,'%02d') '_lonbin_' num2str(iLonBin,'%02d') '.mat commentJacX qrenormUSE qrenormACTUAL nlays m_ts_jac'];
+    saverjac = ['save /asl/s1/sergio/alldata/rtp/MakeAvgProfs2002_2020_startSept2002/Retrieval/LatBin65/SubsetJacLatbin/usethisjac_clear_reconstructcode_latbin_' num2str(iLatBin,'%02d') '_lonbin_' num2str(iLonBin,'%02d') '.mat commentJacX qrenormUSE qrenormACTUAL nlays m_ts_jac'];
   elseif iVersJac == 2021
-    saverjac = ['save /asl/s1/sergio/rtp/MakeAvgProfs2002_2020_startSept2002/Retrieval/LatBin65/SubsetJacLatbin/usethisjac_clear_reconstructcode_ERA5_2021_latbin_' num2str(iLatBin,'%02d') '_lonbin_' num2str(iLonBin,'%02d') '.mat commentJacX qrenormUSE qrenormACTUAL nlays m_ts_jac'];
+    saverjac = ['save /asl/s1/sergio/alldata/rtp/MakeAvgProfs2002_2020_startSept2002/Retrieval/LatBin65/SubsetJacLatbin/usethisjac_clear_reconstructcode_ERA5_2021_latbin_' num2str(iLatBin,'%02d') '_lonbin_' num2str(iLonBin,'%02d') '.mat commentJacX qrenormUSE qrenormACTUAL nlays m_ts_jac'];
   elseif iVersJac == 2014
-    saverjac = ['save /asl/s1/sergio/rtp/MakeAvgProfs2002_2020_startSept2002/Retrieval/LatBin65/SubsetJacLatbin/usethisjac_clear_reconstructcode_ERA5_2014_latbin_' num2str(iLatBin,'%02d') '_lonbin_' num2str(iLonBin,'%02d') '.mat commentJacX qrenormUSE qrenormACTUAL nlays m_ts_jac'];
+    saverjac = ['save /asl/s1/sergio/alldata/rtp/MakeAvgProfs2002_2020_startSept2002/Retrieval/LatBin65/SubsetJacLatbin/usethisjac_clear_reconstructcode_ERA5_2014_latbin_' num2str(iLatBin,'%02d') '_lonbin_' num2str(iLonBin,'%02d') '.mat commentJacX qrenormUSE qrenormACTUAL nlays m_ts_jac'];
   end
   eval(saverjac);
 end
 
-oo = load('/asl/s1/sergio/AIRSPRODUCTS_JACOBIANS/TRP/g2_jac.mat');
+oo = load('/asl/s1/sergio/alldata/AIRSPRODUCTS_JACOBIANS/TRP/g2_jac.mat');
 plot(h.vchan,m_ts_jac(:,1),oo.fout,sum(oo.jout')*2.2/370)
 

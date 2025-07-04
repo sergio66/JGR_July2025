@@ -1,1 +1,0 @@
-../FIND_NWP_MODEL_TRENDS/SyntheticTimeSeries_ERA5_AIRSL3_CMIP6/driver_check_WV_T_RH_CMIP6_geo_and_spectral_rates2.m

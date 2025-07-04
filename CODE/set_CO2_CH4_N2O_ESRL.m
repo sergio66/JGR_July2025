@@ -78,7 +78,7 @@ if settings.set_tracegas == +1 & driver.i16daytimestep < 0 & settings.ocb_set <=
     %% disp('now doing apriori WV(RH) settings')
     %xb(1:5) = xb(1:5)*10;
     %[hhh,~,ppp,~] = rtpread('/home/sergio/KCARTA/WORK/RUN_TARA/GENERIC_RADSnJACS_MANYPROFILES/RTP/summary_19years_all_lat_all_lon_2002_2019_monthlyERA5.rp.rtp');
-    [hhh,~,ppp,~] = rtpread('/asl/s1/sergio/MakeAvgProfs2002_2020/summary_17years_all_lat_all_lon_2002_2019.rtp');
+    [hhh,~,ppp,~] = rtpread('/asl/s1/sergio/alldata/MakeAvgProfs2002_2020/summary_17years_all_lat_all_lon_2002_2019.rtp');
     RH0  = layeramt2RH(hhh,ppp);
     mmw0 = mmwater_rtp(hhh,ppp);
     for iiii = 1 : length(ppp.stemp)
@@ -182,12 +182,12 @@ if settings.set_tracegas == +1 & driver.i16daytimestep < 0 & settings.ocb_set <=
     if iAdjLowerAtmWVfracX > eps
 
       if iVers == 0
-        %% tested and  savesmallFATfile --> /asl/s1/sergio/JUNK/test7_guessstartWV_Vers0_march11_2023.mat, commit on Sat Mar 11 19:17:59 2023 -0500
+        %% tested and  savesmallFATfile --> /asl/s1/sergio/alldata/JUNK/test7_guessstartWV_Vers0_march11_2023.mat, commit on Sat Mar 11 19:17:59 2023 -0500
         xb(6+length(driver.jacobian.water_i)-0) = dBT1231_WV * iAdjLowerAtmWVfracX;
         xb(6+length(driver.jacobian.water_i)-1) = dBT1231_WV * iAdjLowerAtmWVfracX;
 
       elseif iVers == 1
-        %% tested and savesmallFATfile --> /asl/s1/sergio/JUNK/test7_guessstartWV_Vers1_march11_2023.mat, commits on Sun Mar 12 10:01:58 2023 -0400 and Sun Mar 12 09:51:40 2023 -0400
+        %% tested and savesmallFATfile --> /asl/s1/sergio/alldata/JUNK/test7_guessstartWV_Vers1_march11_2023.mat, commits on Sun Mar 12 10:01:58 2023 -0400 and Sun Mar 12 09:51:40 2023 -0400
         xb(6+length(driver.jacobian.water_i)-0) = dBT1231_WV * iAdjLowerAtmWVfracX * (1 - 0/6);
         xb(6+length(driver.jacobian.water_i)-1) = dBT1231_WV * iAdjLowerAtmWVfracX * (1 - 1/6);
         xb(6+length(driver.jacobian.water_i)-2) = dBT1231_WV * iAdjLowerAtmWVfracX * (1 - 2/6);
@@ -198,7 +198,7 @@ if settings.set_tracegas == +1 & driver.i16daytimestep < 0 & settings.ocb_set <=
         fprintf(1,'miaow1 = %8.6f \n',xb(6+length(driver.jacobian.water_i)-0));
 
       elseif iVers == 2
-        %% tested and savesmallFATfile --> /asl/s1/sergio/JUNK/test7_guessstartWV_Vers1_march11_2023.mat, commits on Sun Mar 12 10:01:58 2023 -0400 and Sun Mar 12 09:51:40 2023 -0400
+        %% tested and savesmallFATfile --> /asl/s1/sergio/alldata/JUNK/test7_guessstartWV_Vers1_march11_2023.mat, commits on Sun Mar 12 10:01:58 2023 -0400 and Sun Mar 12 09:51:40 2023 -0400
         %% used since March 12, 2023
         xb(6+length(driver.jacobian.temp_i)-0) = dBT1231 * TfacAdjAtmosphericAmplification * iAdjLowerAtmWVfracX * (1 - 0/6);
         xb(6+length(driver.jacobian.temp_i)-1) = dBT1231 * TfacAdjAtmosphericAmplification * iAdjLowerAtmWVfracX * (1 - 1/6);
@@ -210,7 +210,7 @@ if settings.set_tracegas == +1 & driver.i16daytimestep < 0 & settings.ocb_set <=
         fprintf(1,'miaow2 = %8.6f \n',xb(6+length(driver.jacobian.water_i)-0));
 
       elseif iVers == 3 | iVers == 4 | iVers == 5
-        %% tested and savesmallFATfile --> /asl/s1/sergio/JUNK/   ....
+        %% tested and savesmallFATfile --> /asl/s1/sergio/alldata/JUNK/   ....
         %% used since Nov 16, 2023
 
         if iVers == 4 | iVers == 5

@@ -1,1 +1,0 @@
-SyntheticTimeSeries_ERA5_AIRSL3_CMIP6/wrapper_driver_gather_ALL_rates_AIRSL3_NWP_XMIP.m
