@@ -2,13 +2,25 @@ Copied from /home/sergio/MATLABCODE/oem_pkg_run/MATFILES_for_JGR_trends_paper
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-This is a data/source code directory to make figures for JGR 2025JD043501R
+This is a data/source code directory to make figures for 
+JGR 2025JD043501R
 
 We have cut and paste from the analysis source code(s) so as to make
 the matlab source codes here, arranged in the order of the 14 figures
 in main text and 3 figures in the appendices.
 
-Typically after making the individual panels, we use "imagemagick" on
-a Mac to combine the panels for submission to JGR
+You cn either run the code individually in the Matlab worskpace eg
+  clear all; make_jgr_fig7.m
+or you can loop over them all by running
+  clear all; driver_make_all.m
 
-eg gm montage -trim -geometry 1200x950 -tile 2x1  fig3a.pdf  fig3b.pdf   fig3_merged.pdf
+In either case, we suggest opening 4 matlab plot winows and arrange
+them in a 2x2 tile fashion
+    Fig 1    |    Fig 2
+    ---------|---------
+    Fig 3    |    Fig 4
+
+After making the individual panels for any one figure, we print them
+as png or pdf and then use "imagemagick" on a Mac to combine the
+panels for submission to JGR eg 
+  gm montage -trim -geometry 1200x950+10+10 -tile 2x1  fig3a.pdf  fig3b.pdf   fig3_merged.pdf

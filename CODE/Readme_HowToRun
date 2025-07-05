@@ -1,8 +1,6 @@
-For a better understanding of this code, please refer to the JGR paper (initial submission : early 2025, first revision 
-submitted July 2025)
-
-The .m files in this directory are the minimum you require
-The OTHERCODE/*.m files are extra files used for various work
+The .m files in this directory are the minimum you require. For a
+better understanding of this code, please refer to the JGR paper
+(initial submission : early 2025, first revision submitted July 2025)
 
 This spectral trend climate analysis code assumes you have 
 
@@ -43,5 +41,8 @@ D : output files go to Output or Output_Day
    (depending on whether you chose day trends or night trends to be analyzed)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We are not providing eg AIRS L1C tiled quantile trends since those are huge .mat files and can be generated
+by downloading the L1C data and tiling it by 16 day intervals. 
 
 Please contact Sergio DeSouza-Machado (sergio@umbc.edu) if you have questions
