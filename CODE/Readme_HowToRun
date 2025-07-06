@@ -26,6 +26,7 @@ C : Running the code
     Code is designed to run on the UMBC HPC cluster
     One tile can be run using the main driver code
       clust_run_retrieval_setlatbin_AIRS_loop_lonbin.m
+    The code tkaes any one of the 64 latitude bins, and loops over the 72 longitude bins
     Inside that code, there are many default setting you can adjust using "topts," such as
       day or night
       number of channels
@@ -33,7 +34,7 @@ C : Running the code
       do you wish to stick to AIRS 100 layers, or combine/sum jacobians for eg 50 layers or 33 layers
       tweak the covariance matrices (Tikhonov or exponential decay, diagonal etc)
 
-    This is fast, less than 30 seconds per tile
+    This is fast, less than 30 seconds per tile, or about 30 mins per 72 lonbins (one complete latitude bin).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
